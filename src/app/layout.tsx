@@ -10,8 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* Make the page a column so footer sits at the bottom */}
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
