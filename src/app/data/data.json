@@ -1,0 +1,22 @@
+[
+  {
+    "id": "volakas-white-marble",
+    "name": "Volakas White Marble",
+    "category": "Marble",
+    "finish": "Polished",
+    "thicknessMM": 20,
+    "image": "/products/volakas.jpg",
+    "short": "Elegant white veining, ideal for interiors.",
+    "inStock": true
+  },
+  {
+    "id": "absolute-black-granite",
+    "name": "Absolute Black Granite",
+    "category": "Granite",
+    "finish": "Honed",
+    "thicknessMM": 30,
+    "image": "/products/absolute-black.jpg",
+    "short": "Dense, durable, perfect for countertops.",
+    "inStock": false
+  }
+]
