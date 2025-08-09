@@ -18,5 +18,35 @@
     "image": "/products/absolute-black.jpg",
     "short": "Dense, durable, perfect for countertops.",
     "inStock": false
+  },
+  {
+    "id": "absolute-black-granite",
+    "name": "Absolute Black Granite",
+    "category": "Granite",
+    "finish": "Honed",
+    "thicknessMM": 30,
+    "image": "/products/absolute-black.jpg",
+    "short": "Dense, durable, perfect for countertops.",
+    "inStock": true
+  },
+  {
+    "id": "absolute-black-granite",
+    "name": "Absolute Black Granite",
+    "category": "Granite",
+    "finish": "Honed",
+    "thicknessMM": 30,
+    "image": "/products/absolute-black.jpg",
+    "short": "Dense, durable, perfect for countertops.",
+    "inStock": true
+  },
+  {
+    "id": "absolute-black-granite",
+    "name": "Absolute Black Granite",
+    "category": "Granite",
+    "finish": "Honed",
+    "thicknessMM": 30,
+    "image": "/products/absolute-black.jpg",
+    "short": "Dense, durable, perfect for countertops.",
+    "inStock": true
   }
 ]
