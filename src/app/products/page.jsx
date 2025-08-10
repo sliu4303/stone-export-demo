@@ -1,9 +1,22 @@
+'use client';
+import { useState } from 'react';  
 import ProductCard from '../components/ProductCard';
+import QuoteModal from '../components/QuoteModal';
 import products from '../data/data.json';
 
+
 export default function ProductsPage() {
-  // Build category list for sidebar (not wired yet—purely visual)
-  const categories = ['All', ...Array.from(new Set(products.map(p => p.category)))];
+  // modal state
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
+
+  const openQuote = (product) => {
+    setSelected(product);
+    setOpen(true);
+  };
+
+  // Sidebar categories (visual for now)
+  const categories = ['All', ...Array.from(new Set(products.map((p) => p.category)))];
 
   return (
     <main className="max-w-7xl mx-auto px-6 md:px-8 py-8">
@@ -19,10 +32,7 @@ export default function ProductsPage() {
           <ul className="space-y-2">
             {categories.map((cat) => (
               <li key={cat}>
-                <button
-                  type="button"
-                  className="w-full text-left px-3 py-2 rounded hover:bg-gray-200 transition"
-                >
+                <button type="button" className="w-full text-left px-3 py-2 rounded hover:underline">
                   {cat}
                 </button>
               </li>
@@ -34,11 +44,14 @@ export default function ProductsPage() {
         <section className="flex-1">
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
             {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
+              <ProductCard key={p.id} product={p} onQuote={openQuote} />
             ))}
           </div>
         </section>
       </div>
+
+      {/* Quote Modal */}
+      <QuoteModal open={open} onClose={() => setOpen(false)} product={selected} />
     </main>
   );
 }

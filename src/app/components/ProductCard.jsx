@@ -1,6 +1,7 @@
+'use client'
 import Link from 'next/link';
 
-export default function ProductCard({ product, compact = false }) {
+export default function ProductCard({ product, compact = false, onQuote }) {
   const { id, name, image, short, category, finish, thicknessMM, inStock } = product;
 
   const imgHeight = compact ? 'h-32' : 'h-48';
@@ -8,17 +9,19 @@ export default function ProductCard({ product, compact = false }) {
   const titleSize = compact ? 'text-sm' : 'text-base';
   const bodySize = compact ? 'text-xs' : 'text-sm';
   const btnText = compact ? 'text-xs' : 'text-sm';
-  const gap = compact ? 'gap-3' : 'gap-4'; // a touch more spacing feels nicer
+  const gap = compact ? 'gap-3' : 'gap-4';
 
   return (
     <div className="relative border rounded-lg overflow-hidden bg-white shadow hover:shadow-lg transition-shadow">
-      {/* Image */}
-      <div className={`relative ${imgHeight} bg-gray-100`}>
+      {/* Image (with frame + fallback so white slabs are visible) */}
+      <div className={`relative ${imgHeight} bg-gray-200 border-b`}>
         <img
-          src={image}
+          src={image}                         // e.g. "/images/products/volakas.jpg"
           alt={name}
           className={`w-full h-full object-cover ${!inStock ? 'grayscale' : ''}`}
+          onError={(e) => { e.currentTarget.src = '/images/products/placeholder.jpg'; }}
         />
+
         {!inStock && (
           <>
             <div className="absolute inset-0 bg-white/60" aria-hidden="true" />
@@ -38,10 +41,8 @@ export default function ProductCard({ product, compact = false }) {
           <span>{category}</span> • <span>{finish}</span> • <span>{thicknessMM}mm</span>
         </div>
 
-        {/* Actions */}
-        {/* Center the whole button group */}
+        {/* Actions (centered) */}
         <div className={`mt-4 flex justify-center ${gap}`}>
-          {/* Stronger hover: color + subtle scale + shadow + focus ring */}
           <Link
             href={`/products/${id}`}
             className={`px-4 py-2 rounded-full bg-black text-white ${btnText}
@@ -54,13 +55,13 @@ export default function ProductCard({ product, compact = false }) {
 
           <button
             type="button"
+            onClick={() => onQuote?.(product)}  // <-- IMPLEMENTATION: trigger modal/callback
             title={inStock ? 'Request Quote' : 'Currently out of stock — request availability'}
             className={`px-4 py-2 rounded-full border ${btnText}
                         transition-all duration-200 shadow-sm
                         ${inStock
                           ? 'border-black text-black hover:bg-black hover:text-white'
-                          : 'border-gray-400 text-gray-600 hover:bg-gray-100'
-                        }
+                          : 'border-gray-400 text-gray-600 hover:bg-gray-100'}
                         motion-safe:hover:scale-105 hover:shadow-md
                         focus:outline-none focus:ring-2 focus:ring-black/10`}
           >

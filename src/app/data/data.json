@@ -1,51 +1,61 @@
 [
   {
-    "id": "volakas-white-marble",
+    "id": "volakas-white-marble1",
     "name": "Volakas White Marble",
     "category": "Marble",
     "finish": "Polished",
     "thicknessMM": 20,
-    "image": "/products/volakas.jpg",
+    "image": "/images/products/volakas.jpg",
     "short": "Elegant white veining, ideal for interiors.",
     "inStock": true
   },
   {
-    "id": "absolute-black-granite",
+    "id": "absolute-black-granite2",
     "name": "Absolute Black Granite",
     "category": "Granite",
     "finish": "Honed",
     "thicknessMM": 30,
-    "image": "/products/absolute-black.jpg",
+    "image": "/images/products/absolute-black.jpg",
     "short": "Dense, durable, perfect for countertops.",
     "inStock": false
   },
   {
-    "id": "absolute-black-granite",
+    "id": "absolute-black-granite3",
     "name": "Absolute Black Granite",
     "category": "Granite",
     "finish": "Honed",
     "thicknessMM": 30,
-    "image": "/products/absolute-black.jpg",
+    "image": "/images/products/absolute-black.jpg",
     "short": "Dense, durable, perfect for countertops.",
     "inStock": true
   },
   {
-    "id": "absolute-black-granite",
-    "name": "Absolute Black Granite",
-    "category": "Granite",
-    "finish": "Honed",
-    "thicknessMM": 30,
-    "image": "/products/absolute-black.jpg",
-    "short": "Dense, durable, perfect for countertops.",
+    "id": "volakas-white-marble4",
+    "name": "Volakas White Marble",
+    "category": "Marble",
+    "finish": "Polished",
+    "thicknessMM": 20,
+    "image": "/images/products/volakas.jpg",
+    "short": "Elegant white veining, ideal for interiors.",
     "inStock": true
   },
   {
-    "id": "absolute-black-granite",
+    "id": "absolute-black-granite5",
     "name": "Absolute Black Granite",
     "category": "Granite",
     "finish": "Honed",
     "thicknessMM": 30,
-    "image": "/products/absolute-black.jpg",
+    "image": "/images/products/absolute-black.jpg",
+    "short": "Dense, durable, perfect for countertops.",
+    "inStock": false
+  },
+  {
+    "id": "absolute-black-granite6",
+    "name": "Absolute Black Granite",
+    "category": "Granite",
+    "finish": "Honed",
+    "thicknessMM": 30,
+    "image": "/images/products/absolute-black.jpg",
     "short": "Dense, durable, perfect for countertops.",
     "inStock": true
   }
